@@ -1,0 +1,59 @@
+{
+  "name": "@opendapps/evm-modal",
+  "version": "0.0.0",
+  "author": "Alexandr <re-knownout> knownout@hotmail.com",
+  "license": "MIT",
+  "description": "EVM wallets connecting modal",
+  "scripts": {
+    "prepare": "npx husky install",
+    "serve": "webpack-dev-server --config webpack.config.js",
+    "test": "npx jest --verbose",
+    "build:package": "webpack --config webpack.package.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/re-knownout/evm-modal.git",
+    "directory": "src/package"
+  },
+  "bugs": {
+    "url": "https://github.com/open-dapps/evm-modal/issues"
+  },
+  "homepage": "https://github.com/open-dapps/evm-modal#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.0",
+    "@coinbase/wallet-sdk": "3.6.3",
+    "@knownout/evm-wallet-controller": "^0.2.2",
+    "@knownout/lib": "^0.1.4",
+    "@metamask/providers": "^10.2.1",
+    "@opendapps/modal-window": "^0.0.4",
+    "@testing-library/react": "^14.0.0",
+    "@types/jest": "^27.4.1",
+    "@types/react": "^17.0.41",
+    "@types/react-dom": "^18.0.11",
+    "@walletconnect/ethereum-provider": "1.8.0",
+    "autoprefixer": "^10.4.13",
+    "babel-loader": "^8.2.3",
+    "buffer": "^6.0.3",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",
+    "mini-css-extract-plugin": "^2.6.0",
+    "mobx": "^6.8.0",
+    "mobx-react-lite": "^3.4.0",
+    "postcss": "^8.4.21",
+    "postcss-loader": "^6.2.1",
+    "process": "^0.11.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^27.1.3",
+    "ts-loader": "^9.2.8",
+    "typescript": "^4.6.2",
+    "web3": "^1.8.2",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

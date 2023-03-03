@@ -1,0 +1,45 @@
+{
+    "name": "@opendapps/evm-modal",
+    "version": "0.0.1",
+    "author": "Alexandr <re-knownout> knownout@hotmail.com",
+    "license": "MIT",
+    "description": "EVM wallets connecting modal",
+    "main": "dist/evm-modal.js",
+    "typings": "dist/evm-modal.d.ts",
+    "keywords": [
+        "modal",
+        "evm",
+        "react",
+        "mobx"
+    ],
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/open-dapps/evm-modal.git",
+        "directory": "src/package"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "bugs": {
+        "url": "https://github.com/open-dapps/evm-modal/issues"
+    },
+    "homepage": "https://github.com/open-dapps/evm-modal#readme",
+    "dependencies": {
+        "mobx": "^6.6.2",
+        "mobx-react-lite": "^3.4.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "@knownout/lib": "^0.1.4",
+
+        "@coinbase/wallet-sdk": "3.6.3",
+        "@knownout/evm-wallet-controller": "^0.2.2",
+        "@metamask/providers": "^10.2.1",
+        "@opendapps/modal-window": "^0.0.4",
+        "@walletconnect/ethereum-provider": "1.8.0",
+        "web3": "^1.8.2"
+    }
+}

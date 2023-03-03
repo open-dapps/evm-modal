@@ -1,0 +1,83 @@
+/*!
+ * Copyright (c) 2023 Open decentralized applications
+ * Licensed under the MIT License (AGPL-3.0)
+ * https://github.com/open-dapps
+ */
+
+@import "~@opendapps/modal-window/dist/modal-window.css";
+
+div.od-evm-modal {
+    transition: 300ms;
+
+    div.od-modal-window-container {
+        padding: 40px;
+        transition: 300ms;
+        transform: scale(1, 1);
+        background: linear-gradient(317.16deg, rgba(81, 100, 154, 0.6) 78.4%, rgb(104, 247, 170) 105.77%);
+        border-radius: 16px;
+        max-width: min(100%, 100px);
+
+        gap: 40px;
+        color: #fff;
+
+        &-header {
+            align-items: flex-start;
+            gap: 20px;
+
+            &-title {
+                font-size: 24px;
+                font-weight: 500;
+                white-space: normal;
+                overflow: visible;
+            }
+
+            &-close {
+                min-width: 32px;
+                min-height: 32px;
+
+                svg {
+                    color: #436177;
+                }
+
+                &:hover {
+                    opacity: 1;
+
+                    svg {
+                        color: rgb(104, 247, 170);
+                    }
+                }
+            }
+        }
+
+        &-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        &::before {
+            position: absolute;
+            display: block;
+            top: 2px;
+
+            left: 2px;
+            z-index: -1;
+
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+
+            content: "";
+
+            border-radius: 14px;
+            background: rgb(28, 28, 38);
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        div.od-modal-window-container {
+            margin: 0;
+            padding: 40px 20px;
+        }
+    }
+}

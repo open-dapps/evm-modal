@@ -1,0 +1,21 @@
+div.icon {
+    position: relative;
+    display: grid;
+
+    width: 24px;
+
+    height: 24px;
+    cursor: pointer;
+
+    transition: 100ms ease all;
+    place-items: center;
+
+    &:hover {
+        opacity: .8;
+    }
+
+    & > svg {
+        width: inherit;
+        height: inherit;
+    }
+}
