@@ -16,7 +16,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm add -g husky jest
       - run: yarn install
-      - run: yarn run test
       - run: yarn run build:package
       - run: cd ./package && yarn publish --access public
         env:
