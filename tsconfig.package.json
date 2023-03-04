@@ -5,8 +5,7 @@
         "declaration": true,
         "removeComments": false,
         "outDir": "./package/dist",
-        "declarationDir": "./package/dist",
-        "experimentalDecorators": true,
+        "declarationDir": "./package/dist"
     },
 
     "include": [

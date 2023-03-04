@@ -1,6 +1,6 @@
 /*!
  * Copyright (c) 2023 Open decentralized applications
- * Licensed under the MIT License (AGPL-3.0)
+ * Licensed under the MIT License
  * https://github.com/open-dapps
  */
 
@@ -13,12 +13,12 @@ div.od-evm-modal {
         padding: 40px;
         transition: 300ms;
         transform: scale(1, 1);
-        background: linear-gradient(317.16deg, rgba(81, 100, 154, 0.6) 78.4%, rgb(104, 247, 170) 105.77%);
+        color: #FFF;
+
         border-radius: 16px;
-        max-width: min(100%, 100px);
+        background: linear-gradient(317.16deg, rgba(81, 100, 154, 0.6) 78.4%, rgb(104, 247, 170) 105.77%);
 
         gap: 40px;
-        color: #fff;
 
         &-header {
             align-items: flex-start;
@@ -27,8 +27,8 @@ div.od-evm-modal {
             &-title {
                 font-size: 24px;
                 font-weight: 500;
-                white-space: normal;
                 overflow: visible;
+                white-space: normal;
             }
 
             &-close {
@@ -78,6 +78,79 @@ div.od-evm-modal {
         div.od-modal-window-container {
             margin: 0;
             padding: 40px 20px;
+        }
+    }
+}
+
+div.od-evm-modal-item {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    padding: 20px;
+
+    cursor: pointer;
+    transition: inherit;
+    color: #FFF;
+
+    border: 2px solid rgb(72, 84, 125);
+    border-radius: 8px;
+
+    background: #3A3A51;
+    box-shadow: 0 0 10px 0 rgba(#000, .1);
+
+    gap: 15px;
+
+    &-container {
+        position: relative;
+        display: flex;
+
+        flex-direction: column;
+        gap: 2px;
+
+        &-title {
+            font-size: 18px;
+        }
+
+        &-state {
+            font-size: 14px;
+            opacity: .5;
+        }
+    }
+
+    &-icon {
+        $size: 24px;
+        width: $size;
+        min-width: $size;
+
+        height: $size;
+        min-height: $size;
+
+        svg, img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &:hover {
+        border-color: rgb(104, 247, 170);
+        background: lighten(#3A3A51, 5%);
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .6;
+    }
+
+    &.connecting {
+        pointer-events: none;
+        border-color: rgb(104, 247, 170);
+
+        background: lighten(#3A3A51, 5%);
+
+        &-text &-text-hint {
+
         }
     }
 }

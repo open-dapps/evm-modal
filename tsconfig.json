@@ -14,7 +14,6 @@
         "moduleResolution": "Node",
         "resolveJsonModule": true,
         "strictNullChecks": false,
-        "paths": {},
         "sourceMap": true,
         "sourceRoot": "/",
         "alwaysStrict": true,
@@ -28,7 +27,19 @@
         "noImplicitReturns": true,
         "noImplicitThis": true,
         "noUncheckedIndexedAccess": true,
-        "jsx": "react"
+        "jsx": "react",
+        "paths": {
+            "misc/*": [ "./package/misc/*" ],
+            "misc": [ "./package/misc/index.ts" ],
+            "utils/*": [ "./package/utils/*" ],
+            "utils": [ "./package/utils/index.ts" ],
+            "types/*": [ "./package/types/*" ],
+            "types": [ "./package/types/index.ts" ],
+            "connector-utils": [ "./package/connector-utils/index.ts" ]
+        },
+        "typeRoots": [
+            "./package/types"
+        ]
     },
 
     "include": [

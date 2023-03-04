@@ -1,0 +1,63 @@
+/*!
+ * Copyright (c) 2023 Open decentralized applications
+ * Licensed under the MIT License
+ * https://github.com/open-dapps
+ */
+
+@import "~@opendapps/modal-window/dist/modal-window.css";
+
+div.od-evm-modal {
+    div.od-modal-window-container {
+        color: #000;
+
+        &-header {
+            align-items: flex-start;
+        }
+
+        &-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        div.od-modal-window-container {
+            margin: 0;
+            padding: 40px 20px;
+        }
+    }
+}
+
+div.od-evm-modal-item {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+
+    &-container {
+        position: relative;
+        display: flex;
+
+        flex-direction: column;
+
+        &-state {
+            font-size: 14px;
+            opacity: .5;
+        }
+    }
+
+    &-icon {
+        $size: 24px;
+        width: $size;
+        min-width: $size;
+
+        height: $size;
+        min-height: $size;
+
+        svg, img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

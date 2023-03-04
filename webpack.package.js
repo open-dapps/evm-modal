@@ -1,5 +1,7 @@
 const path = require("path");
 const defaultConfig = require("./webpack.config.js");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack");
 
 const packageConfig = Object.assign(defaultConfig, {
     mode: "production",
@@ -17,7 +19,10 @@ const packageConfig = Object.assign(defaultConfig, {
         "emv-modal": path.resolve(__dirname, "package", "evm-modal.ts"),
         "misc/index": path.resolve(__dirname, "package", "misc", "index.ts"),
         "utils/index": path.resolve(__dirname, "package", "utils", "index.ts"),
-        "components/index": path.resolve(__dirname, "package", "components", "index.ts"),
+        "types/index": path.resolve(__dirname, "package", "types", "index.ts"),
+        "connector-utils/index": path.resolve(__dirname, "package", "connector-utils", "index.ts"),
+        "components/EvmModal/styles/default": path.resolve(__dirname, "package", "components", "EvmModal", "styles/default.scss"),
+        "components/EvmModal/styles/venom": path.resolve(__dirname, "package", "components", "EvmModal", "styles/venom.scss")
     },
 
     externals: {
@@ -76,7 +81,14 @@ const packageConfig = Object.assign(defaultConfig, {
             commonjs2: "web3",
             amd: "web3"
         }
-    }
+    },
+
+    plugins: [
+        new MiniCssExtractPlugin(),
+        new webpack.ProvidePlugin({
+            process: "process/browser"
+        })
+    ]
 });
 
 packageConfig.module.rules[1].use.options.configFile = "tsconfig.package.json";

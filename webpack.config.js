@@ -16,7 +16,13 @@ module.exports = {
     entry: path.resolve(__dirname, "sandbox", "index"),
 
     resolve: {
-        extensions: [ ".tsx", ".jsx", ".js", ".ts" ]
+        extensions: [ ".tsx", ".jsx", ".js", ".ts" ],
+        alias: {
+            "misc": path.resolve(process.cwd(), "package", "misc"),
+            "utils": path.resolve(process.cwd(), "package", "utils"),
+            "types": path.resolve(process.cwd(), "package", "types"),
+            "connector-utils": path.resolve(process.cwd(), "package", "connector-utils")
+        }
     },
 
     devServer: {
@@ -58,7 +64,7 @@ module.exports = {
 
         new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
-            process: 'process/browser',
-        }),
+            process: "process/browser"
+        })
     ]
 };

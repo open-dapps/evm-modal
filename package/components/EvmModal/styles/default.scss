@@ -1,0 +1,108 @@
+/*!
+ * Copyright (c) 2023 Open decentralized applications
+ * Licensed under the MIT License
+ * https://github.com/open-dapps
+ */
+
+@import "~@opendapps/modal-window/dist/modal-window.css";
+
+div.od-evm-modal {
+    transition: 300ms;
+
+    div.od-modal-window-container {
+        padding: 20px;
+        transition: 300ms;
+        transform: scale(1, 1);
+        color: #000;
+
+        gap: 20px;
+
+        &-header {
+            align-items: flex-start;
+            gap: 20px;
+
+            &-title {
+                font-weight: 500;
+                overflow: visible;
+                white-space: normal;
+            }
+        }
+
+        &-body {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        div.od-modal-window-container {
+            margin: 0;
+            padding: 40px 20px;
+        }
+    }
+}
+
+div.od-evm-modal-item {
+    position: relative;
+    display: flex;
+
+    align-items: center;
+    padding: 20px;
+
+    cursor: pointer;
+    transition: inherit;
+    color: #000;
+
+    background: rgba(#000, .1);
+
+    gap: 15px;
+
+    &-container {
+        position: relative;
+        display: flex;
+
+        flex-direction: column;
+        gap: 2px;
+
+        &-state {
+            font-size: 14px;
+            opacity: .5;
+        }
+    }
+
+    &-icon {
+        $size: 24px;
+        width: $size;
+        min-width: $size;
+
+        height: $size;
+        min-height: $size;
+
+        svg, img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &:hover {
+        background: rgba(#000, .2);
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+        pointer-events: none;
+        opacity: .6;
+    }
+
+    &.connecting, &.connected {
+        pointer-events: none;
+
+        background: rgba(blue, .2);
+
+        &-text &-text-hint {
+
+        }
+    }
+}

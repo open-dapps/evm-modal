@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2023 Open decentralized applications
- * Licensed under the MIT License (AGPL-3.0)
+ * Licensed under the MIT License
  * https://github.com/open-dapps
  */
 
