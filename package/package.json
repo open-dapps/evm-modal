@@ -1,6 +1,6 @@
 {
     "name": "@opendapps/evm-modal",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "author": "Alexandr <re-knownout> knownout@hotmail.com",
     "license": "MIT",
     "description": "EVM wallets connecting modal",

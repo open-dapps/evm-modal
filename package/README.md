@@ -43,6 +43,7 @@ _Note that in these examples, the `evmWallet` variable is the wallet controller 
 
 ```ts
 import { EvmWalletConnector } from "@opendapps/evm-modal"
+import { getCoinbaseProvider } from "@opendapps/evm-modal/connector-utils"
 
 class CoinbaseConnector extends EvmWalletConnector {
   constructor () {
@@ -50,7 +51,7 @@ class CoinbaseConnector extends EvmWalletConnector {
   }
 
   public override async connectToWallet (): Promise<boolean> {
-    // Используем функцию для получения провайдета Coinbase
+    // Use utility function to get Coinbase provider
     const coinbaseProvider = await getCoinbaseProvider(this.provider)
 
     return evmWallet.connectWallet(coinbaseProvider as any, "CoinbaseWallet")
